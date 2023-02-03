@@ -48,12 +48,10 @@
       width: 70%;
       text-align: justify;
     }
-    .img-container {
-      float: left;
-      width: 28%;
-      text-align: right;
-    }
     .head {
+      color: rgb(181, 26, 58);
+    }
+    .foot {
       color: rgb(181, 26, 58);
     }
     .btn {
@@ -130,7 +128,7 @@
 
   <body style="background-color: #fff0f3">
     <main>
-      <div class="main px-4 py-5 my-5 text-center">
+      <div class="main px-2 py-3 my-3 text-center">
         <div class="content">
           <div class="head">
             <h1>SpoonMovies</h1>
@@ -159,10 +157,15 @@
           <div class="card content mb-3">
             <div class="first-container card-body">
               <div class="card-text">
-                <p>
+                <h4>
                   Search and find your favorite movies to watch with your
-                  significant other in this Valentine's Day while a romantic
-                  dinner date.
+                  significant other in this Valentine's Day.
+                </h4>
+                <p>
+                  Type the movie name in the input section and click in the
+                  button "Search". The movie informations will apear in a new
+                  card! To search for another movie, click in button "Reset" and
+                  repeat typing another movie's name.
                 </p>
               </div>
               <div class="search-container input-group m-9">
@@ -173,26 +176,32 @@
                   aria-describedby="basic-addon3"
                   placeholder="Type the movie name"
                 />
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  id="search"
-                >
-                  Search
-                </button>
-                <button type="button" class="btn btn-primary" id="clean">
-                  Reset
-                </button>
+                <div class="search-button">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary button"
+                    id="search"
+                  >
+                    Search
+                  </button>
+                  <button type="button" class="btn btn-primary" id="clean">
+                    Reset
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
-          <div id="movieCard" class="content card" style="display: none">
-            <div class="card-body second-container mt-4">
+          <div
+            id="movieCard"
+            class="content card card-body"
+            style="display: none"
+          >
+            <div class="second-container mt-4">
               <div class="text-container">
                 <h3>{{movie.Title}}</h3>
                 <h6>{{movie.Plot}}</h6>
-                <p><b>Elenco : </b>{{movie.Actors}}</p>
+                <p><b>Cast : </b>{{movie.Actors}}</p>
                 <p>
                   <b>Review : </b>
                   {{movie.Review}}
@@ -205,7 +214,13 @@
           </div>
         </div>
         <div>
-          <div class="foot"></div>
+          <div class="foot">
+            <p>
+              Tip: You can also surprise your partner with a home-cooked meal
+              and candlelight dinner in the backyard. <br />Make sure you both
+              will never forget.
+            </p>
+          </div>
         </div>
       </div>
     </main>
